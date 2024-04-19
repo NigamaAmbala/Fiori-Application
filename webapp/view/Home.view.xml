@@ -2,49 +2,48 @@
     controllerName="com.app.fioriapplication.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
     <Page
         id="page"
-        title="homeview"
-    >
-        <!-- first number -->
-        <VBox id="idVboxFirstNumber">
-            <Label
-                id="idLabelFirstNumber"
-                labelFor="idFirstNumber"
-                text="Enter the First Number"
-            />
-            <Input
-                id="idFirstNumber"
-                type="Number"
-                placeholder="Enter a Number"
-                width="30%"
-            />
-        </VBox>
-        <!-- Second Number -->
-        <VBox id="idVboxSecondNumber">
-            <Label
-                id="idLabelSecondNumber"
-                labelFor="idSecondNumber"
-                text="Enter the First Number"
-            />
-            <Input
-                id="idSecondNumber"
-                type="Number"
-                placeholder="Enter a Number"
-                width="30%"
-            />
-        </VBox>
-        <Button
-            id="idCalculateButton"
-            text="Calculate"
-            type="Success"
-            press="onCalculate"
-        />
-        <Button
-        id="idJsonModel"
-        text="Json Model"
-        press="JsonModel"
-    />
+        title="homeview" >
+        <!-- Property Binding -->
+
+        <VBox class="sapUiSmallMargin">
+        <f:SimpleForm
+            id="SimpleFormChange354"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            title="Employee Details"
+            labelSpanXL="3"
+            labelSpanL="3"
+            labelSpanM="3"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="4"
+            emptySpanL="4"
+            emptySpanM="4"
+            emptySpanS="0"
+            columnsXL="1"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false"
+        >
+    <f:content>
+        <Label id = "Label" text = "Employee name"/>
+        <Input id = "Name" value="{Employee1>/employee/EmployeeName}"></Input>
+    
+        
+        <Label id = "Label1" text = "Employee age"/>
+        <Input id = "Age" value="{Employee1>/employee/Age}"></Input>
+      
+       
+        <Label id = "Label2" text = "salary"/>
+        <Input id = "Salary" value="{Employee1>/employee/Salary}"></Input>
+        
+         </f:content>
+        </f:SimpleForm>
+    </VBox>
     </Page>
 </mvc:View>

@@ -9,47 +9,29 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("com.app.fioriapplication.controller.Home", {
+            onInit: function() {
+                const oPerson = {
+                    employee: {
+                        EmployeeName: "Ryka",
+                        Age:20,
+                        Salary:"10lpa"
 
-            onCalculate: function (OEvent) {
-
-                var oView = this.getView();
-
-                var iFirstNumber = parseInt(oView.byId("idFirstNumber").getValue());
-
-                var iSecondNumber = parseInt(oView.byId("idSecondNumber").getValue());
-
-                var iResult = iFirstNumber + iSecondNumber;
-
-                alert(iResult);
-            },
-            JsonModel: function () {
-                alert("button triggred")
-               const oPerson = {
-                 details: {
-                     name: "Rohan",
-                    age: 50
-                },
-             salDetails: {
-                     ctc: "1LPA"
+                    }
                 }
-             }
-             const oPerson1 = {
-                details: {
-                    name: "Ryka",
-                    age: 24
-                },
-                salDetails: {
-                    ctc:"10LPA"
+                const oPerson1 = {
+                    employee: {
+                        EmployeeName: "Nigama",
+                        Age:20,
+                        Salary:"12lpa"
+
+                    }
                 }
-             }
-            //  debugger
-             const oJsonModel = new JSONModel(oPerson);
-             const localModel = new JSONModel(oPerson1);
-             this.getView().setModel(oJsonModel);
-             this.getView().setModel(localModel,"localmodel");
-             console.log(oJsonModel);
-             console.log(localModel);
-         }
-            
+
+                const oJsonModel = new JSONModel(oPerson);
+                const localMode1 = new JSONModel(oPerson1);
+                this.getView().setModel(oJsonModel);
+                this.getView().setModel(localMode1,"Employee1");
+            }
+
         });
     });
