@@ -1,0 +1,50 @@
+<mvc:View
+    controllerName="com.app.fioriapplication.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    <Page
+        id="page"
+        title="homeview"
+    >
+        <!-- first number -->
+        <VBox id="idVboxFirstNumber">
+            <Label
+                id="idLabelFirstNumber"
+                labelFor="idFirstNumber"
+                text="Enter the First Number"
+            />
+            <Input
+                id="idFirstNumber"
+                type="Number"
+                placeholder="Enter a Number"
+                width="30%"
+            />
+        </VBox>
+        <!-- Second Number -->
+        <VBox id="idVboxSecondNumber">
+            <Label
+                id="idLabelSecondNumber"
+                labelFor="idSecondNumber"
+                text="Enter the First Number"
+            />
+            <Input
+                id="idSecondNumber"
+                type="Number"
+                placeholder="Enter a Number"
+                width="30%"
+            />
+        </VBox>
+        <Button
+            id="idCalculateButton"
+            text="Calculate"
+            type="Success"
+            press="onCalculate"
+        />
+        <Button
+        id="idJsonModel"
+        text="Json Model"
+        press="JsonModel"
+    />
+    </Page>
+</mvc:View>
